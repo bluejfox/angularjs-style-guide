@@ -354,6 +354,7 @@ module.factory('Service', function ($rootScope, $timeout, MyCustomDependency1, M
    对于包含大量代码的需要上下滚动的文件尤其适用。这可能使你忘记某一变量是对应哪一个依赖。
 
 * 尽可能的精简控制器。将通用函数抽象为独立的服务。
+* 必须使用ng-click="click(value1, value2)"的形式传入函数所需参数，原因是即使在click函数中对value1或value2进行修改，也不会影响画面的显示。
 * 不要再控制器中写业务逻辑。把业务逻辑交给模型层的服务。
   举个例子:
 
